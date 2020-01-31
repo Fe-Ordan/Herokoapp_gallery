@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "discordproject-260511",
+  "private_key_id": "dcf90e0b626f1b4a26dece02fc7741780e3f5a63",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCp3C1oLZEWzooJ\nkkOj2miNHytqPZwtE4BjVY2t0VtrLUoXeoyRAQvN7AOeZU1at6H11heDvrbaG2/P\nYpV3jvNtHQmrorgcvUMP7/qZvcEY809ay3Kd0SxyajlunaxnLal7QDLJHj7hSPEe\njlD3OGjJXD8Ysc1fT3xSoS/Udctt5XyDLqmzJPZ6K9ojE3p9lmr2ZaACQEdEmO2N\nLAZeLGDdnvp7UKrkIzOniuj75dT3v15bvcDMatiu8Kl8vOE78j7Vc2LQ/3DGj463\nf5xZ7GmXrK5CWdN8RxndgZaFf+TmODd/eLNQNwcp7Vf3bxWntXvin5QZnHNK+KSw\nhohIpFiVAgMBAAECggEAC9Q9hUfHFuODUW9SLpMDPPCywU9RFQKKqmBG4Zf22dvp\nkQED0QVVoR2SkvFTFcI8ETa7pH0flsjaXILtDcpywWKITd+jGr1DclSwCwzf6bDo\nEdahQMRUaBNltIJeg0D20JKD9uWYU3AU+p/Gm7Dd+0flTP704nJSoh5/ijg51olL\ntIanwLkAlSCn81CFTu+PKPT8pe6JsQBDFlcee9zmD4BNIL4iRfqHNeIy+URJnP/3\nlHXAq6u2qtp8/bDfQLBlnEp9ZSnQRXre57pqU2/L6b9qclnKLRNL4cKiy3lncN1s\nnz0l0fUt1G5ehdEK1uHCMj4+E270e4anSJ6KTEKzgQKBgQDZifkIRscYFC40xKck\n/nGvZAynXkGCrcp8S1V8nrbG/pCLJlVX2hrl5Jjnt2mvr8hvXgZqoK3gutVQMACl\np0PkBqhgHhOLZxNqabpxk38LGQ6VjcacrQQM7KGzGkj12veI7gPueG6M/jUPG6p2\nwRy4WsSdSwnH0JakQkZaxi5JCQKBgQDH5DYQS1e82T6mt3gwuzl7JmuA4/wYwG28\nf2ofrjfK/BdfytCGowEOsSQ2662Rk7YPRo9WF0ynth4MyAgD2c4V46c981vGAGcH\nqejzQM+tYmKhBRvSlRGi+0dKDzbFL1OrY8+Twdn9VXDFXtJFKMAxBUAidsneRQhS\nlsIlRn/yLQKBgCDKqo5z1NktWZW8uxFZhZuRslKcY7WmKuq3lGhXqGewwesn2R+I\nEhvrbJ0pSbYhAk6/VqpGFE/W+ga/ZamS4CoEUudCQWH3JLcavu8V88WhflBO8cx2\nTDECjpFn+e2Nl1i9wDv3TXrVavwfCIAkNgcYL6EiSZQkPkD+eIqAa0O5AoGBALGI\nEDQ8ljoVwD0VqduuDQlBQC2DTr00+sF1cG2er9LKPoBHgxhw4VmJHp7ghpFK3WGH\ny3osy1oQt3OmnOe+o/hw7nJpF1MtvFPkJg8Vut1FCk/0V5eZ6cYU4mX2STCsLeWE\nijGy88a6AaRp6NqfrMJc5W82jWepbBDd8KRmjvApAoGBANX4Q3OvSrHWRnS/e6cV\nrhMHWywSkyGXSoD2LNVtuaPwAJQ66JqoFLVdoEUBOkPT/OiKLDwQyVgh1P7M3Wi0\n7Oj+Z3mniBTQVlFin3nJNvIcJOdJzMSCrMwipDn6WnMzvbmavrri6S42mhvHuCOS\nf7Bbv9pr7N/wLNyu6ShEsRvj\n-----END PRIVATE KEY-----\n",
+  "client_email": "fethi-230@discordproject-260511.iam.gserviceaccount.com",
+  "client_id": "101554685312543088529",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/fethi-230%40discordproject-260511.iam.gserviceaccount.com"
+}
