@@ -11,11 +11,14 @@ module.exports.home = (req,res,next)=>{
     //   };
 	//   firebase.initializeApp(config);
   let list = [];
-	console.log('this is request: '+req)
-	firebase.initializeApp({
-		serviceAccount:"./DiscordProject-dcf90e0b626f.json",
-		databaseURL:"https://discordproject-260511.firebaseio.com/"
-	});
+  console.log('this is request: '+req)
+  if (firebase.apps.length === 0){
+    firebase.initializeApp({
+      serviceAccount:"./DiscordProject-dcf90e0b626f.json",
+      databaseURL:"https://discordproject-260511.firebaseio.com/"
+    });
+  }
+
       var rootRef = firebase
         .database()
         .ref()
@@ -33,8 +36,8 @@ module.exports.home = (req,res,next)=>{
 
             })
             console.log('This is the list1 : '+list)
-            list.push('https://i.imgur.com/cnLk26O.png')
-            list.push('https://i.imgur.com/55qFWAj.jpg')
+             list.push('https://i.imgur.com/cnLk26O.png')
+            // list.push('https://i.imgur.com/55qFWAj.jpg')
           
             return list;
         }).then(val =>{
