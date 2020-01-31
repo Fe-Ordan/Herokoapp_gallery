@@ -26,13 +26,17 @@ module.exports.home = (req,res,next)=>{
         
             snapshot.forEach(function(snap){
               valuepost = snap.val();
-              list.push(valuepost.memesLink);
+              list.push(valuepost.memeLink);
+           //   console.log(JSON.stringify(snap))
+              console.log(valuepost.memeLink)
 
 
             })
-            return list;
-        }).then(val =>{
-          res.render('gallery', { imgs: val, layout:false});
+            console.log('This is the list1 : '+list)
+            list.push('https://i.imgur.com/cnLk26O.png')
+            list.push('https://i.imgur.com/55qFWAj.jpg')
+            res.render('gallery', { imgs: list, layout:false});
+           // return list;
         })
 
     //   var urlParams = new URLSearchParams(window.location.search);
