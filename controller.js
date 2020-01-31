@@ -10,7 +10,7 @@ module.exports.home = (req,res,next)=>{
     //     projectId: 'xxxxxxx'
     //   };
 	//   firebase.initializeApp(config);
-	
+  let list = [];
 	console.log('this is request: '+req)
 	firebase.initializeApp({
 		serviceAccount:"./DiscordProject-dcf90e0b626f.json",
@@ -22,7 +22,7 @@ module.exports.home = (req,res,next)=>{
         //.child('FilesSent')
         //.child('-LytqNOFMA1Ghym4bA1E');
         rootRef.child("Memes").orderByChild('memeLink').limitToFirst(10).once('value',snapshot =>{
-          let list = [];
+   
         
             snapshot.forEach(function(snap){
               valuepost = snap.val();
@@ -35,8 +35,10 @@ module.exports.home = (req,res,next)=>{
             console.log('This is the list1 : '+list)
             list.push('https://i.imgur.com/cnLk26O.png')
             list.push('https://i.imgur.com/55qFWAj.jpg')
-            res.render('gallery', { imgs: list, layout:false});
-           // return list;
+          
+            return list;
+        }).then(val =>{
+          res.render('gallery', { imgs: list, layout:false});
         })
 
     //   var urlParams = new URLSearchParams(window.location.search);
