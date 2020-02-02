@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var controller = require('../controllerGallery');
+var controllerGallery = require('../controllerGallery');
 
 /* GET home page. */
 router.get('/', controllerGallery.home);

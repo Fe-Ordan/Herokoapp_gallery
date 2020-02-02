@@ -18,12 +18,12 @@ module.exports.home = (req,res,next)=>{
       databaseURL:"https://discordproject-260511.firebaseio.com/"
     });
   }
-  var uniquShareID = req.req.query.id; 
+  var uniquShareID = req.query.id; 
   //var string = JSON.stringify(req);
   //var objectValue = JSON.parse(string);
  // objectValue['mm'];
  console.log('this is request : ',req)
-   console.log('this is request : ',req.req.query)
+  // console.log('this is request : ',req.req.query)
    //console.log('this is request2 : ',objectValue['query'])
    firebase.database().ref("SharedImgurAlbums").child(uniquShareID).once('value',function(snapshot){
     
