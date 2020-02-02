@@ -41,7 +41,7 @@ app.get('/SharedGallery',(res,req,next) =>{
       if(snapshot.hasChildren()){
 
         if(JSON.stringify(snapshot.val()) != null){
-          galleryList = snapshot.val().id.linksofAlbum;
+          galleryList = snapshot.val().linksofAlbum;
           if(galleryList){
             res.render('gallery', { imgs: galleryList, layout:false});
           }
