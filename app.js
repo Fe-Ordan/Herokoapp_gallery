@@ -31,20 +31,21 @@ app.use('/myimgur', index);
 //app.use('/users', users);
 app.get('/SharedGallery',(res,req,next) =>{
   var id = req.query.id; 
-  firebase.database().ref("SharedImgurAlbums").child(uniquShareID).once('value',function(snapshot){
+  console.log(req)
+  // firebase.database().ref("SharedImgurAlbums").child(uniquShareID).once('value',function(snapshot){
    
-      if(snapshot.hasChildren()){
+  //     if(snapshot.hasChildren()){
 
-        if(JSON.stringify(snapshot.val()) != null){
-          galleryList = snapshot.val().id.linksofAlbum;
-          if(galleryList){
-            res.render('gallery', { imgs: galleryList, layout:false});
-          }
-        }
-      }
+  //       if(JSON.stringify(snapshot.val()) != null){
+  //         galleryList = snapshot.val().id.linksofAlbum;
+  //         if(galleryList){
+  //           res.render('gallery', { imgs: galleryList, layout:false});
+  //         }
+  //       }
+  //     }
    
     
-    })
+  //   })
 })
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
