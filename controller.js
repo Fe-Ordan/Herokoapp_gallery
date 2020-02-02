@@ -37,7 +37,7 @@ module.exports.home = (req,res,next)=>{
             })
             console.log('This is the list1 : '+list)
              list.push('https://i.imgur.com/cnLk26O.png')
-             list.push("https://scontent.xx.fbcdn.net/v/t1.15752-9/83862981_497671327558111_185033702282100736_n.png?_nc_cat=109&_nc_oc=AQmG-YP0bxjrjQr42QLe2Du91hR2BZBhFPDNnqSgL00Evbb5bflzDAqaMNGZOuaYJOo1Z9PFcjLRIQsZeRqNgCx9&_nc_ad=z-m&_nc_cid=0&_nc_zor=9&_nc_ht=scontent.xx&oh=8def52d2baab9f8e5d238201d4aa4efe&oe=5ED8B947")
+            // list.push("https://scontent.xx.fbcdn.net/v/t1.15752-9/83862981_497671327558111_185033702282100736_n.png?_nc_cat=109&_nc_oc=AQmG-YP0bxjrjQr42QLe2Du91hR2BZBhFPDNnqSgL00Evbb5bflzDAqaMNGZOuaYJOo1Z9PFcjLRIQsZeRqNgCx9&_nc_ad=z-m&_nc_cid=0&_nc_zor=9&_nc_ht=scontent.xx&oh=8def52d2baab9f8e5d238201d4aa4efe&oe=5ED8B947")
             // list.push('https://i.imgur.com/55qFWAj.jpg')
           
             return list;
