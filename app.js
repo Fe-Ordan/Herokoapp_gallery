@@ -7,9 +7,14 @@ var favicon = require('serve-favicon');
 //var imgur = require('imgur');
 var index = require('./routes/index');
 //var users = require('./routes/users');
-
+const firebase = require('firebase');
 var app = express();
-
+if (firebase.apps.length === 0){
+  firebase.initializeApp({
+    serviceAccount:"./DiscordProject-dcf90e0b626f.json",
+    databaseURL:"https://discordproject-260511.firebaseio.com/"
+  });
+}
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -24,7 +29,23 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/myimgur', index);
 //app.use('/users', users);
+app.get('/SharedGallery',(res,req,next) =>{
+  var id = req.query.id; 
+  firebase.database().ref("SharedImgurAlbums").child(uniquShareID).once('value',function(snapshot){
+   
+      if(snapshot.hasChildren()){
 
+        if(JSON.stringify(snapshot.val()) != null){
+          galleryList = snapshot.val().id.linksofAlbum;
+          if(galleryList){
+            res.render('gallery', { imgs: galleryList, layout:false});
+          }
+        }
+      }
+   
+    
+    })
+})
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
