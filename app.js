@@ -32,10 +32,10 @@ app.use('/myimgur', index);
 app.get('/SharedGallery',(res,req,next) =>{
  // var id = req.query.id; 
  var string = JSON.stringify(req);
- var objectValue = JSON.parse(string);
+ //var objectValue = JSON.parse(string);
 // objectValue['mm'];
-  console.log('this is request : ',req.outputSize)
-  console.log('this is request2 : ',objectValue['query'])
+  console.log('this is request : ',req)
+  //console.log('this is request2 : ',objectValue['query'])
   // firebase.database().ref("SharedImgurAlbums").child(uniquShareID).once('value',function(snapshot){
    
   //     if(snapshot.hasChildren()){
