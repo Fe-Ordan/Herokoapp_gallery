@@ -30,26 +30,26 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/myimgur', index);
 //app.use('/users', users);
 app.get('/SharedGallery',(res,req,next) =>{
- // var id = req.query.id; 
+  var uniquShareID = req.req.query.id; 
  //var string = JSON.stringify(req);
  //var objectValue = JSON.parse(string);
 // objectValue['mm'];
   console.log('this is request : ',req.req.query)
   //console.log('this is request2 : ',objectValue['query'])
-  // firebase.database().ref("SharedImgurAlbums").child(uniquShareID).once('value',function(snapshot){
+  firebase.database().ref("SharedImgurAlbums").child(uniquShareID).once('value',function(snapshot){
    
-  //     if(snapshot.hasChildren()){
+      if(snapshot.hasChildren()){
 
-  //       if(JSON.stringify(snapshot.val()) != null){
-  //         galleryList = snapshot.val().id.linksofAlbum;
-  //         if(galleryList){
-  //           res.render('gallery', { imgs: galleryList, layout:false});
-  //         }
-  //       }
-  //     }
+        if(JSON.stringify(snapshot.val()) != null){
+          galleryList = snapshot.val().id.linksofAlbum;
+          if(galleryList){
+            res.render('gallery', { imgs: galleryList, layout:false});
+          }
+        }
+      }
    
     
-  //   })
+    })
 })
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
