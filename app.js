@@ -30,8 +30,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/myimgur', index);
 //app.use('/users', users);
 app.get('/SharedGallery',(res,req,next) =>{
-  var id = req.query.id; 
-  console.log(req)
+ // var id = req.query.id; 
+  console.log('this is request : ',req)
   // firebase.database().ref("SharedImgurAlbums").child(uniquShareID).once('value',function(snapshot){
    
   //     if(snapshot.hasChildren()){
