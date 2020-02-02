@@ -31,7 +31,7 @@ app.use('/myimgur', index);
 //app.use('/users', users);
 app.get('/SharedGallery',(res,req,next) =>{
  // var id = req.query.id; 
- var string = JSON.stringify(req);
+ //var string = JSON.stringify(req);
  //var objectValue = JSON.parse(string);
 // objectValue['mm'];
   console.log('this is request : ',req)
