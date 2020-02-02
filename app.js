@@ -6,7 +6,7 @@ var favicon = require('serve-favicon');
 //var bodyParser = require('body-parser');
 //var imgur = require('imgur');
 var index = require('./routes/index');
-//var users = require('./routes/users');
+var users = require('./routes/users');
 const firebase = require('firebase');
 var app = express();
 if (firebase.apps.length === 0){
@@ -28,29 +28,10 @@ app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/myimgur', index);
-//app.use('/users', users);
-app.get('/SharedGallery',(res,req,next) =>{
-  var uniquShareID = req.req.query.id; 
- //var string = JSON.stringify(req);
- //var objectValue = JSON.parse(string);
-// objectValue['mm'];
-  console.log('this is request : ',req.req.query)
-  //console.log('this is request2 : ',objectValue['query'])
-  firebase.database().ref("SharedImgurAlbums").child(uniquShareID).once('value',function(snapshot){
-   
-      if(snapshot.hasChildren()){
-
-        if(JSON.stringify(snapshot.val()) != null){
-          galleryList = snapshot.val().linksofAlbum;
-          if(galleryList){
-            res.render('gallery', { imgs: galleryList, layout:false});
-          }
-        }
-      }
-   
-    
-    })
-})
+app.use('/SharedGallery', users);
+// app.get('/SharedGallery',(res,req,next) =>{
+  
+// })
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
